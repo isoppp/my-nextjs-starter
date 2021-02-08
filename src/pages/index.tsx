@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 
-const IndexPage: NextPage = ()  => {
+const IndexPage: NextPage = () => {
   return (
     <main>
       <h1>Home</h1>
@@ -8,5 +8,3 @@ const IndexPage: NextPage = ()  => {
   )
 }
 export default IndexPage
-
-
