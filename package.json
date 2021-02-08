@@ -1,0 +1,8 @@
+{
+  "name": "my-nextjs-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/isoppp/my-nextjs-starter.git",
+  "author": "isoppp <prog@d2deck.com>",
+  "license": "MIT"
+}
