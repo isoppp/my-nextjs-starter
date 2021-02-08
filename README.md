@@ -1,6 +1,10 @@
-## Steps
+## Features
 
-Initialize Next.js and Typescript
+- Next.js
+- ESLint + Prettier + Husky + ling-staged
+- TailwindCSS + Plugins + configs
+
+## Setup Steps
 
 ```bash
 # Initialize NPM project using yarn
@@ -30,8 +34,15 @@ yarn add --dev tailwindcss@latest postcss@latest autoprefixer@latest
 
 # Init tailwindcss config
 npx tailwindcss init -p
+
+# Add tailwindcss plugins
+yarn add --dev tailwind-css-variables @tailwindcss/custom-forms @tailwindcss/aspect-ratio
 ```
 
-## References
+## Optional
 
-- Foundation: https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
+- Chakra UI: https://chakra-ui.com/docs/getting-started
+- Jest(example project): 
+  - https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
+  - https://github.com/pankod/next-boilerplate/
+- Storybook(example project): https://github.com/pankod/next-boilerplate
