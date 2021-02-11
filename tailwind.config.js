@@ -17,8 +17,8 @@ module.exports = {
       sans: [
         '"Helvetica Neue"',
         'Arial',
-        'Hiragino Kaku Gothic ProN"',
-        'Hiragino Sans"',
+        'Hiragino Kaku Gothic ProN',
+        'Hiragino Sans',
         'Meiryo',
         'sans-serif',
       ],
@@ -26,7 +26,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#10DE8F',
-        text: '#333',
+        text: '#222',
       },
       spacing: {
         '0': '0',
