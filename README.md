@@ -1,6 +1,6 @@
 ## Features
 
-- Next.js
+- Next.js + Typescript
 - ESLint + Prettier + Husky + ling-staged
 - TailwindCSS + Plugins + configs
 
@@ -39,8 +39,9 @@ npx tailwindcss init -p
 yarn add --dev tailwind-css-variables @tailwindcss/custom-forms @tailwindcss/aspect-ratio
 ```
 
-## Optional
+## Optional Libraries and Reference 
 
+- Awesome manual setup guide https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
 - Chakra UI: https://chakra-ui.com/docs/getting-started
 - Jest(example project): 
   - https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
