@@ -3,6 +3,8 @@
 - Next.js + Typescript
 - ESLint + Prettier + Husky + ling-staged
 - TailwindCSS + Plugins + configs
+- Recoil for global store
+- react-query for fetching data
 
 ## Setup Steps
 
@@ -37,6 +39,12 @@ npx tailwindcss init -p
 
 # Add tailwindcss plugins
 yarn add --dev tailwind-css-variables @tailwindcss/custom-forms @tailwindcss/aspect-ratio
+
+# Add recoil
+yarn add recoil
+
+# Add react-query
+yarn add react-query
 ```
 
 ## Optional Libraries and Reference 
