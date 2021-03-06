@@ -3,7 +3,7 @@
 - Next.js + Typescript
 - ESLint + Prettier + Husky + ling-staged
   
-- TailwindCSS + Plugins + configs
+- Chakra UI + TailwindCSS with plugins and configs
 - Recoil + clsx
 - react-query for fetching data
 
@@ -46,12 +46,21 @@ yarn add recoil
 
 # Add react-query
 yarn add react-query
+
+# To use createPortal
+yarn add react-dom
+yarn add -D @types/react-dom
+
+# Add clsx
+yarn add clsx
+
+# Add Chakra UI
+yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
 ## Optional Libraries and Reference 
 
 - Awesome manual setup guide https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
-- Chakra UI: https://chakra-ui.com/docs/getting-started
 - Jest(example project): 
   - https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
   - https://github.com/pankod/next-boilerplate/
