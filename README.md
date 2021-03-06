@@ -2,8 +2,9 @@
 
 - Next.js + Typescript
 - ESLint + Prettier + Husky + ling-staged
+  
 - TailwindCSS + Plugins + configs
-- Recoil for global store
+- Recoil + clsx
 - react-query for fetching data
 
 ## Setup Steps

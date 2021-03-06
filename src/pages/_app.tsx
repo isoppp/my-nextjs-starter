@@ -1,6 +1,7 @@
 import AppFooter from '@/components/AppFooter'
 import AppHeader from '@/components/AppHeader'
 import { DebugObserver } from '@/components/core/DebugObserver'
+import FlashMessages from '@/components/shared/FlashMessages'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import 'tailwindcss/tailwind.css'
@@ -23,6 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           <Component {...pageProps} />
         </main>
         <AppFooter />
+        <FlashMessages />
       </QueryClientProvider>
     </RecoilRoot>
   )

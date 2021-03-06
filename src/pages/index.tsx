@@ -1,6 +1,16 @@
+import { useFlashMessageDispatcher } from '@/hooks/useFlashMessageDispatcher'
 import { NextPage } from 'next'
 
 const IndexPage: NextPage = () => {
-  return <h1>Home</h1>
+  const { addSuccessMessage, addErrorMessage } = useFlashMessageDispatcher()
+  return (
+    <div>
+      <h1>Home</h1>
+      <div>
+        <button onClick={() => addSuccessMessage('Success!')}>Add Message</button>
+        <button onClick={() => addErrorMessage('Error!')}>Add Error</button>
+      </div>
+    </div>
+  )
 }
 export default IndexPage
