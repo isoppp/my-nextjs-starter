@@ -7,6 +7,8 @@
 - Recoil + clsx
 - react-query for fetching data
 
+- Storybook
+
 ## Setup Steps
 
 ```bash
@@ -56,6 +58,10 @@ yarn add clsx
 
 # Add Chakra UI
 yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
+# Add Storybook (run the command and then edit files)
+npx sb init
+
 ```
 
 ## Optional Libraries and Reference 
@@ -64,4 +70,3 @@ yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion
 - Jest(example project): 
   - https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
   - https://github.com/pankod/next-boilerplate/
-- Storybook(example project): https://github.com/pankod/next-boilerplate
