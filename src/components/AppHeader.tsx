@@ -1,7 +1,7 @@
 import { VFC } from 'react'
 
 const AppHeader: VFC = () => {
-  return <header>Header</header>
+  return <header className="color-red-600">Header</header>
 }
 
 export default AppHeader
