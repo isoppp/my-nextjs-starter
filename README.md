@@ -17,7 +17,7 @@ yarn init
 yarn add next react react-dom
 
 # Add Typescript dependencies
-yarn add typescript @types/react @types/node
+yarn add --dev typescript @types/react @types/node
 
 # Add index.tsx to pages/
 
