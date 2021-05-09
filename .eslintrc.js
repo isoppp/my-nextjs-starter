@@ -23,8 +23,7 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
         'plugin:jsx-a11y/recommended',
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
+        'prettier',
       ],
       rules: {
         // We will use TypeScript's types for component props instead
@@ -47,7 +46,6 @@ module.exports = {
             allowConciseArrowFunctionExpressionsStartingWithVoid: true,
           },
         ],
-        'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Includes .prettierrc.js rules
       },
     },
   ],
