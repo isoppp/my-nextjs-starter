@@ -14,13 +14,8 @@
     "generate:icon": "npx @svgr/cli --ext tsx --memo -d src/components/icon src/components/icon",
     "prestorybook": "rimraf node_modules/.cache/storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn type-check"
-    }
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
