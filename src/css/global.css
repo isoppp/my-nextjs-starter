@@ -1,5 +1,15 @@
-/*  avoid conflict with chakra */
-/* @tailwind base; */
-
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button:focus {
+  outline: none;
+}
+
+a:focus {
+  box-shadow: none !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
