@@ -26,7 +26,7 @@
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.1.5",
     "@types/node": "^16.11.10",
-    "@types/react": "^17.0.1",
+    "@types/react": "^17.0.37",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.7",
     "framer-motion": "^5.3.3",
