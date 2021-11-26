@@ -61,7 +61,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "postcss": "^8.2.5",
-    "prettier": "^2.2.1",
+    "prettier": "^2.5.0",
     "tailwind-css-variables": "^3.0.1",
     "tailwindcss": "^2.0.3",
     "tsconfig-paths-webpack-plugin": "^3.5.1"
