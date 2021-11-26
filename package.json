@@ -33,7 +33,7 @@
     "next": "^11.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hook-form": "^7.18.0",
+    "react-hook-form": "^7.20.4",
     "react-icons": "^4.3.1",
     "react-query": "^3.9.8",
     "recoil": "^0.2.0",
