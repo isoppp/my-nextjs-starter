@@ -11,7 +11,7 @@ jobs:
         with:
           branchPrefix: "dependabot"
           mustBeGreen: true
-          combineBranchName: "combined-prs"
+          combineBranchName: "combined-dependabot-prs"
           ignoreLabel: "nocombine"
           baseBranch: "main"
           openPR: true
