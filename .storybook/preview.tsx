@@ -1,9 +1,9 @@
 import '../src/css/global.css'
-import AppProviders from "../src/components/core/AppProviders";
-import * as React from "react"
-import { StoryContext } from "@storybook/react";
+import AppProviders from '../src/components/core/AppProviders'
+import * as React from 'react'
+import { StoryContext } from '@storybook/react'
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -15,7 +15,7 @@ export const parameters = {
 const withProviders = (StoryFn: Function, context: StoryContext) => {
   return (
     <AppProviders>
-        <StoryFn />
+      <StoryFn />
     </AppProviders>
   )
 }
