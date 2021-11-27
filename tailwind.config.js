@@ -1,6 +1,6 @@
 const plugin = require('tailwindcss/plugin')
 
-// in use: extend: { margin: { ...addConfigByGrid([100, 200]) } }
+// in use: extend: { margin: { ...addConfigByRem([100, 200]) } }
 // const addConfigByRem = arr => {
 //   return arr.reduce((acc, cur) => {
 //     acc[cur] = `${cur * 0.25}rem`
@@ -9,7 +9,8 @@ const plugin = require('tailwindcss/plugin')
 // }
 
 module.exports = {
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+  mode: 'jit',
+  purge: ['./public/**/*.html', './src/**/*.{ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
@@ -22,18 +23,10 @@ module.exports = {
         text: '#222',
       },
       spacing: {
-        0: '0',
-        '1px': '1px',
-        '2px': '2px',
-        '3px': '3px',
         full: '100%',
       },
       opacity: {
         85: '.85',
-      },
-      inset: {
-        100: '100%',
-        '1/2': '50%',
       },
       lineHeight: {
         base: '1.6',
@@ -41,9 +34,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      margin: ['first'],
-    },
+    extend: {},
   },
   plugins: [
     plugin(function ({ addBase, config }) {
@@ -60,7 +51,7 @@ module.exports = {
     require('tailwind-css-variables')(
       {
         colors: 'color',
-        screens: '', // '',
+        screens: 'screen', // 'screen',
         fontFamily: 'font', // 'font',
         fontSize: false, // 'text',
         fontWeight: false, // 'font',
@@ -77,7 +68,7 @@ module.exports = {
         maxHeight: false, // 'max-h',
         padding: false, // 'p',
         margin: false, // 'm',
-        boxShadow: 'shadows', // 'shadows',
+        boxShadow: 'shadow', // 'shadows',
         zIndex: false, // 'z',
         opacity: false, // 'opacity',
       },
