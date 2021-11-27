@@ -55,9 +55,6 @@ yarn add -D @types/react-dom
 # Add clsx
 yarn add clsx
 
-# Add Chakra UI
-yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion
-
 # Add Storybook (run the command and then edit files)
 npx sb init
 
