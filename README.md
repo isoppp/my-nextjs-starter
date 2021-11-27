@@ -2,7 +2,7 @@
 
 - Next.js + Typescript
 - ESLint + Prettier + Husky + ling-staged
-- Chakra UI + TailwindCSS with plugins and configs
+- TailwindCSS
 - Recoil + clsx
 - react-query for fetching data
 
@@ -26,7 +26,7 @@ yarn add --dev typescript @types/react @types/node
 yarn add --dev eslint @typescript-eslint/parser  @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
 
 # Add prettier
-yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier
+yarn add --dev prettier eslint-config-prettier
 
 # Add .eslintrc.js and .prettierrc.js
 
@@ -54,9 +54,6 @@ yarn add -D @types/react-dom
 
 # Add clsx
 yarn add clsx
-
-# Add Chakra UI
-yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
 # Add Storybook (run the command and then edit files)
 npx sb init
