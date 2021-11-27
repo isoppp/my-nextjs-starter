@@ -11,6 +11,7 @@
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint --ext js,ts,tsx .",
+    "format": "prettier --write './**/*.{js,ts,tsx,css,scss,json,html,graphql,md}' --ignore-path .gitignore",
     "prestorybook": "rimraf node_modules/.cache/storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -19,6 +20,9 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix"
+    ],
+    "*.{js,ts,tsx,css,scss,json,html,graphql,md}": [
+      "prettier --write --ignore-path .gitignore"
     ]
   },
   "dependencies": {
