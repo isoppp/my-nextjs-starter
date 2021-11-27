@@ -11,6 +11,7 @@
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint --ext js,ts,tsx .",
+    "format": "prettier --write './**/*.{js,ts,tsx,css,scss,json,html,graphql,md}' --ignore-path .gitignore",
     "prestorybook": "rimraf node_modules/.cache/storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -19,20 +20,23 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "eslint --fix"
+    ],
+    "*.{js,ts,tsx,css,scss,json,html,graphql,md}": [
+      "prettier --write --ignore-path .gitignore"
     ]
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.2",
     "@emotion/react": "^11.7.0",
-    "@emotion/styled": "^11.1.5",
+    "@emotion/styled": "^11.6.0",
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.37",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.7",
     "framer-motion": "^5.3.3",
-    "next": "^11.1.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "next": "^12.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-hook-form": "^7.20.4",
     "react-icons": "^4.3.1",
     "react-query": "^3.33.6",
@@ -43,27 +47,26 @@
   "devDependencies": {
     "@storybook/addon-actions": "^6.4.0",
     "@storybook/addon-essentials": "^6.4.0",
-    "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-links": "^6.4.0",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.4.0",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "autoprefixer": "^10.4.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
-    "postcss": "^8.2.5",
+    "postcss": "^8.4.3",
     "prettier": "^2.5.0",
     "tailwind-css-variables": "^3.0.1",
-    "tailwindcss": "^2.0.3",
-    "tsconfig-paths-webpack-plugin": "^3.5.1"
+    "tailwindcss": "^2.2.19",
+    "tsconfig-paths-webpack-plugin": "^3.5.2"
   }
 }

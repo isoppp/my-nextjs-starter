@@ -14,14 +14,7 @@ module.exports = {
   theme: {
     fontFamily: {
       // Japanese setting
-      sans: [
-        '"Helvetica Neue"',
-        'Arial',
-        'Hiragino Kaku Gothic ProN',
-        'Hiragino Sans',
-        'Meiryo',
-        'sans-serif',
-      ],
+      sans: ['"Helvetica Neue"', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -29,7 +22,7 @@ module.exports = {
         text: '#222',
       },
       spacing: {
-        '0': '0',
+        0: '0',
         '1px': '1px',
         '2px': '2px',
         '3px': '3px',
@@ -39,7 +32,7 @@ module.exports = {
         85: '.85',
       },
       inset: {
-        '100': '100%',
+        100: '100%',
         '1/2': '50%',
       },
       lineHeight: {
@@ -53,9 +46,9 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ addBase, config }) {
+    plugin(function ({ addBase, config }) {
       addBase({
-        'body': {
+        body: {
           fontFamily: config('theme.fontFamily.sans').join(', '),
           lineHeight: config('theme.lineHeight.base'),
           color: config('theme.colors.text'),

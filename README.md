@@ -2,7 +2,6 @@
 
 - Next.js + Typescript
 - ESLint + Prettier + Husky + ling-staged
-  
 - Chakra UI + TailwindCSS with plugins and configs
 - Recoil + clsx
 - react-query for fetching data
@@ -24,7 +23,7 @@ yarn add --dev typescript @types/react @types/node
 # Add index.tsx to pages/
 
 # Add ESLint
-yarn add --dev eslint @typescript-eslint/parser  @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y 
+yarn add --dev eslint @typescript-eslint/parser  @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
 
 # Add prettier
 yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier
@@ -64,9 +63,9 @@ npx sb init
 
 ```
 
-## Optional Libraries and Reference 
+## Optional Libraries and Reference
 
 - Awesome manual setup guide https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
-- Jest(example project): 
+- Jest(example project):
   - https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js
   - https://github.com/pankod/next-boilerplate/
