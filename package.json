@@ -15,7 +15,8 @@
     "prestorybook": "rimraf node_modules/.cache/storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen:c": "hygen component new"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
@@ -58,6 +59,7 @@
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
+    "hygen": "^6.1.0",
     "lint-staged": "^12.1.2",
     "postcss": "^8.4.4",
     "prettier": "^2.5.0",
