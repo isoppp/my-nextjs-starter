@@ -10,8 +10,7 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   mode: 'jit',
-  purge: ['./public/**/*.html', './src/**/*.{ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./public/**/*.html', './src/**/*.{ts,tsx}'],
   theme: {
     fontFamily: {
       // Japanese setting
