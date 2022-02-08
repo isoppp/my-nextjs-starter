@@ -27,7 +27,7 @@
     ]
   },
   "dependencies": {
-    "@types/node": "^17.0.15",
+    "@types/node": "^17.0.16",
     "@types/react": "^17.0.39",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.7",
