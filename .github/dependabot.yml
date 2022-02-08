@@ -10,4 +10,4 @@ updates:
     target-branch: "main"
     open-pull-requests-limit: 100
     schedule:
-      interval: "weekly"
+      interval: "monthly"
