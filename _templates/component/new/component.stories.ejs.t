@@ -1,6 +1,6 @@
 ---
-to: <%= fullPath %>/component.stories.tsx
-sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/component.stories.tsx
+to: <%= fullPath %>/<%= h.changeCase.pascal(name) %>.stories.tsx
+sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/<%= h.changeCase.pascal(name) %>.stories.tsx
 ---
 import React, { ComponentProps } from 'react'
 import { Meta, Story } from '@storybook/react'
@@ -10,7 +10,7 @@ type Props = ComponentProps<typeof <%= h.changeCase.pascal(name) %>>
 
 export default {
   component: <%= h.changeCase.pascal(name) %>,
-  title: 'shared/<%= h.changeCase.pascal(name) %>',
+  title: '<%= storyPath %>',
   argTypes: {}
 } as Meta<Props>
 
