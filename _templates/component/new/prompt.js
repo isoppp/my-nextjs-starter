@@ -22,10 +22,7 @@ function getAllDirs(dirPaths, depth, count = 0, allDirs = []) {
   return getAllDirs(dirs, depth, ++count, [...allDirs, dirs].flat())
 }
 
-const componentsBasePath = 'src/components'
-const dirs = getAllDirs([path.join(process.cwd(), componentsBasePath)], 10).map((p) =>
-  p.replace(process.cwd() + '/', ''),
-)
+const dirs = getAllDirs([path.join(process.cwd(), 'src/components')], 10).map((p) => p.replace(process.cwd() + '/', ''))
 
 module.exports = {
   prompt: ({ inquirer }) => {
@@ -63,7 +60,7 @@ module.exports = {
     return inquirer.prompt(questions).then((answers) => {
       const { dir, subdir, name } = answers
       const fullPath = path.join(process.cwd(), dir, subdir, changeCase.pascal(name))
-      const storyPath = fullPath.replace(path.join(process.cwd(), componentsBasePath) + '/', '')
+      const storyPath = [dir.replace('src/components/', ''), subdir].filter(Boolean).join('/')
       return { ...answers, fullPath, storyPath }
     })
   },
