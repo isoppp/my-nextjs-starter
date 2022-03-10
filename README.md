@@ -11,4 +11,4 @@ My Next.js starter
 - dayjs
 - Storybook
 - svgr
-- please add react-query(w/axios) or urql(w/graphql-gen) by project spec
+- add react-query(w/axios) or urql(w/graphql-gen) by project spec(REST or GraphQL)
