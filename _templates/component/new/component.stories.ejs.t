@@ -10,7 +10,7 @@ type Props = ComponentProps<typeof <%= h.changeCase.pascal(name) %>>
 
 export default {
   component: <%= h.changeCase.pascal(name) %>,
-  title: 'shared/<%= h.changeCase.pascal(name) %>',
+  title: '<%= storyPath %>/<%= h.changeCase.pascal(name) %>',
   argTypes: {}
 } as Meta<Props>
 

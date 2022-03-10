@@ -60,7 +60,8 @@ module.exports = {
     return inquirer.prompt(questions).then((answers) => {
       const { dir, subdir, name } = answers
       const fullPath = path.join(process.cwd(), dir, subdir, changeCase.pascal(name))
-      return { ...answers, fullPath }
+      const storyPath = [dir.replace('src/components/', ''), subdir].filter(Boolean).join('/')
+      return { ...answers, fullPath, storyPath }
     })
   },
 }
