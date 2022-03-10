@@ -8,27 +8,65 @@ const plugin = require('tailwindcss/plugin')
 //   }, {})
 // }
 
+const fallbackFonts = [
+  '"Helvetica Neue"',
+  'Arial',
+  '"Hiragino Kaku Gothic ProN"',
+  '"Hiragino Sans"',
+  'Meiryo',
+  'sans-serif',
+]
+
 module.exports = {
-  mode: 'jit',
   content: ['./public/**/*.html', './src/**/*.{ts,tsx}'],
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
-      // Japanese setting
-      sans: ['"Helvetica Neue"', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'sans-serif'],
+      sans: [...fallbackFonts],
     },
     extend: {
       colors: {
-        primary: '#10DE8F',
-        text: '#222',
+        primary: { base: '#12BBEB' },
+        secondary: { base: '#EA8222' },
+        tertiary: { base: '#A0DB24' },
+        success: { base: '#59EC14' },
+        warn: { base: '#EDCD27' },
+        error: { base: '#EE5513' },
+        text: '#333',
+        gray: {
+          bg: '#fafafa',
+        },
       },
       spacing: {
         full: '100%',
       },
+      fontSize: {
+        'icon-xs': '16',
+        'icon-sm': '24px',
+        'icon-md': '32px',
+        'icon-lg': '48px',
+        'icon-xl': '64px',
+      },
+      minHeight: {
+        '100vh': '100vh',
+      },
       opacity: {
         85: '.85',
       },
+      grayscale: {
+        5: '5%',
+        25: '25%',
+      },
+      brightness: {
+        98: '.98',
+      },
       lineHeight: {
         base: '1.6',
+      },
+      animation: {
+        'spin-fast': 'spin 0.6s linear infinite',
       },
     },
   },
@@ -47,35 +85,5 @@ module.exports = {
         },
       })
     }),
-    require('tailwind-css-variables')(
-      {
-        colors: 'color',
-        screens: 'screen', // 'screen',
-        fontFamily: 'font', // 'font',
-        fontSize: false, // 'text',
-        fontWeight: false, // 'font',
-        lineHeight: false, // 'leading',
-        letterSpacing: false, // 'tracking',
-        backgroundSize: false, // 'bg',
-        borderWidth: false, // 'border',
-        borderRadius: false, // 'rounded',
-        width: false, // 'w',
-        height: false, // 'h',
-        minWidth: false, // 'min-w',
-        minHeight: false, // 'min-h',
-        maxWidth: false, // 'max-w',
-        maxHeight: false, // 'max-h',
-        padding: false, // 'p',
-        margin: false, // 'm',
-        boxShadow: 'shadow', // 'shadows',
-        zIndex: false, // 'z',
-        opacity: false, // 'opacity',
-      },
-      {
-        // options
-      },
-    ),
-    require('@tailwindcss/custom-forms'),
-    require('@tailwindcss/aspect-ratio'),
   ],
 }

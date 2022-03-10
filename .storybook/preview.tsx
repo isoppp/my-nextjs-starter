@@ -1,7 +1,8 @@
-import '../src/css/global.css'
+import './tailwind.css'
 import AppProviders from '../src/components/core/AppProviders'
 import * as React from 'react'
 import { StoryContext } from '@storybook/react'
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {

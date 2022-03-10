@@ -6,16 +6,16 @@
   "author": "isoppp <prog@d2deck.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "PORT=3033 next dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint --ext js,ts,tsx .",
     "format": "prettier --write './**/*.{js,ts,tsx,css,scss,json,html,graphql,md}' --ignore-path .gitignore",
-    "prestorybook": "rimraf node_modules/.cache/storybook",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "run-p storybook:*",
+    "storybook:t": "tailwindcss -o .storybook/tailwind.css --watch",
+    "storybook:s": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": "husky install",
     "gen:c": "hygen component new"
   },
   "lint-staged": {
@@ -44,11 +44,14 @@
   "devDependencies": {
     "@storybook/addon-actions": "6.4.19",
     "@storybook/addon-essentials": "6.4.19",
+    "@storybook/addon-interactions": "6.4.19",
     "@storybook/addon-links": "6.4.19",
     "@storybook/addon-postcss": "2.0.0",
+    "@storybook/builder-webpack5": "6.4.19",
+    "@storybook/manager-webpack5": "6.4.19",
     "@storybook/react": "6.4.19",
-    "@tailwindcss/aspect-ratio": "0.4.0",
-    "@tailwindcss/custom-forms": "0.2.1",
+    "@storybook/testing-library": "0.0.9",
+    "@svgr/webpack": "^6.2.1",
     "@types/react-dom": "17.0.13",
     "@typescript-eslint/eslint-plugin": "5.14.0",
     "@typescript-eslint/parser": "5.14.0",
@@ -61,9 +64,9 @@
     "husky": "7.0.4",
     "hygen": "6.2.0",
     "lint-staged": "12.3.5",
+    "npm-run-all": "4.1.5",
     "postcss": "8.4.8",
     "prettier": "2.5.1",
-    "tailwind-css-variables": "3.0.1",
     "tailwindcss": "3.0.23",
     "tsconfig-paths-webpack-plugin": "3.5.2"
   }
