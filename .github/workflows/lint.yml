@@ -1,0 +1,24 @@
+name: Frontend Lint
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    name: "Run eslint / tsc"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+          cache: yarn
+      - name: yarn install
+        run: yarn install
+      - name: eslint
+        run: yarn lint
+      - name: tsc
+        run: yarn type-check
