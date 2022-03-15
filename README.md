@@ -1,6 +1,6 @@
 My Next.js starter
 
-## my setup is...
+---
 
 - React(Next.js) + Typescript
 - ESLint + Prettier + Husky + ling-staged
