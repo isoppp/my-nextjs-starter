@@ -1,5 +1,6 @@
-import { useFlashMessageDispatcher } from '@/hooks/useFlashMessageDispatcher'
 import { NextPage } from 'next'
+
+import { useFlashMessageDispatcher } from '@/hooks/useFlashMessageDispatcher'
 
 const IndexPage: NextPage = () => {
   const { addSuccessMessage, addErrorMessage } = useFlashMessageDispatcher()

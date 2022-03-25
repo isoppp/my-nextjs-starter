@@ -1,6 +1,7 @@
-import AppHeader from './AppHeader'
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
+
+import AppHeader from './AppHeader'
 
 export default {
   component: AppHeader,
