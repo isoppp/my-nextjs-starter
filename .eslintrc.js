@@ -7,6 +7,7 @@ module.exports = {
   parserOptions: { ecmaVersion: 2020 },
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
   extends: ['eslint:recommended'],
+  plugins: ['simple-import-sort'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
@@ -21,6 +22,7 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
+        'plugin:valtio/recommended',
         'plugin:react-hooks/recommended',
         'plugin:tailwindcss/recommended',
         // 'plugin:jsx-a11y/recommended',
@@ -38,6 +40,9 @@ module.exports = {
 
         // Why would you want unused vars?
         '@typescript-eslint/no-unused-vars': ['error'],
+
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
       },
     },
   ],
