@@ -1,5 +1,6 @@
-import { FlashMessage, flashMessageStoreActions } from '@/store/flash-message'
 import { useCallback } from 'react'
+
+import { FlashMessage, flashMessageStoreActions } from '@/store/flash-message'
 
 type Dispatcher = {
   addSuccessMessage(message: string): void
