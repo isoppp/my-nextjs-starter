@@ -1,6 +1,6 @@
-import { VFC } from 'react'
+import { FC } from 'react'
 
-const AppFooter: VFC = () => {
+const AppFooter: FC = () => {
   return <footer>Footer</footer>
 }
 

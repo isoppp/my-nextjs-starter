@@ -1,6 +1,6 @@
-import { VFC } from 'react'
+import { FC } from 'react'
 
-const AppHeader: VFC = () => {
+const AppHeader: FC = () => {
   return <header className="color-red-600">Header</header>
 }
 

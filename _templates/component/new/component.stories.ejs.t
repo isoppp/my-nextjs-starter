@@ -4,13 +4,13 @@ sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/component.stories
 ---
 import React, { ComponentProps } from 'react'
 import { Meta, Story } from '@storybook/react'
-import <%= h.changeCase.pascal(name) %> from './<%= h.changeCase.pascal(name) %>'
+import { <%= h.changeCase.pascal(name) %> } from './'
 
 type Props = ComponentProps<typeof <%= h.changeCase.pascal(name) %>>
 
 export default {
   component: <%= h.changeCase.pascal(name) %>,
-  title: '<%= storyPath %>/<%= h.changeCase.pascal(name) %>',
+  title: `<%= storyPath %>/${<%= h.changeCase.pascal(name) %>.displayName}`,
   argTypes: {}
 } as Meta<Props>
 

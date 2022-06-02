@@ -27,8 +27,6 @@
     ]
   },
   "dependencies": {
-    "@types/node": "^17.0.16",
-    "@types/react": "^17.0.39",
     "clsx": "^1.1.1",
     "dayjs": "^1.10.7",
     "next": "^12.0.10",
@@ -41,6 +39,8 @@
     "zod": "^3.11.6"
   },
   "devDependencies": {
+    "@types/node": "17.0.38",
+    "@types/react": "18.0.10",
     "@storybook/addon-actions": "6.5.6",
     "@storybook/addon-essentials": "6.5.6",
     "@storybook/addon-interactions": "6.5.6",
