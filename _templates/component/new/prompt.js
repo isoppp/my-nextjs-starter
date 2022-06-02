@@ -1,28 +1,15 @@
-const fs = require('fs')
 const path = require('path')
 const changeCase = require('change-case')
+const glob = require('glob')
 
-function getAllDirs(dirPaths, depth, count = 0, allDirs = []) {
-  const temp = []
-  for (const dirPath of dirPaths) {
-    const dirents = fs.readdirSync(dirPath, { withFileTypes: true })
-    const dirs = dirents
-      .flat()
-      .filter((dirent) => dirent.isDirectory())
-      .filter((dirent) => !/^[A-Z].*/.test(dirent.name))
-      .map((dirent) => path.join(dirPath, dirent.name))
-    temp.push(dirs)
-  }
-
-  const dirs = temp.flat()
-
-  if (dirs.length === 0 || count >= depth) {
-    return allDirs
-  }
-  return getAllDirs(dirs, depth, ++count, [...allDirs, dirs].flat())
-}
-
-const dirs = getAllDirs([path.join(process.cwd(), 'src/components')], 10).map((p) => p.replace(process.cwd() + '/', ''))
+const componentRootDirs = [
+  ...glob.sync('src/components/!(pages)/', { dot: false }),
+  ...glob.sync('src/+(features)/!(_*)/components', { dot: false }),
+]
+const componentDirs = [
+  ...componentRootDirs.filter((d) => d !== 'src/components'),
+  ...componentRootDirs.map((_path) => glob.sync(`${_path}/**/[!A-Z]*/`, { dot: false })).flat(),
+]
 
 module.exports = {
   prompt: ({ inquirer }) => {
@@ -37,7 +24,7 @@ module.exports = {
         type: 'autocomplete',
         name: 'dir',
         message: 'select directory',
-        choices: dirs,
+        choices: componentDirs,
       },
       {
         type: 'input',
@@ -60,7 +47,17 @@ module.exports = {
     return inquirer.prompt(questions).then((answers) => {
       const { dir, subdir, name } = answers
       const fullPath = path.join(process.cwd(), dir, subdir, changeCase.pascal(name))
-      const storyPath = [dir.replace('src/components/', ''), subdir].filter(Boolean).join('/')
+      const storyPath = [
+        dir
+          .replace('src/components/', '')
+          .replace('src/', '')
+          .replace('/components', '')
+          .replace('features/', '')
+          .replace(/\/$/, ''),
+        subdir,
+      ]
+        .filter(Boolean)
+        .join('/')
       return { ...answers, fullPath, storyPath }
     })
   },

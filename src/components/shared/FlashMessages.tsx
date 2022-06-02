@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { FC, useCallback, useEffect, useState, VFC } from 'react'
+import { FC, ReactNode, useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useSnapshot } from 'valtio'
 
@@ -7,7 +7,11 @@ import { useClient } from '@/hooks/useClient'
 import { useFlashMessageDispatcher } from '@/hooks/useFlashMessageDispatcher'
 import { flashMessageStore } from '@/store/flash-message'
 
-const FlashMessage: FC<{ id: string; className?: string }> = ({ id, className = '', children }) => {
+const FlashMessage: FC<{ id: string; className?: string; children: ReactNode }> = ({
+  id,
+  className = '',
+  children,
+}) => {
   const [startFadeout, setStartFadeOut] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { removeMessage } = useFlashMessageDispatcher()
@@ -37,7 +41,7 @@ const FlashMessage: FC<{ id: string; className?: string }> = ({ id, className = 
   )
 }
 
-const FlashMessages: VFC = () => {
+const FlashMessages: FC = () => {
   const isClient = useClient()
   const { items } = useSnapshot(flashMessageStore)
 

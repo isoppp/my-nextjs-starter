@@ -1,21 +1,15 @@
 ---
-to: <%= fullPath %>/<%= h.changeCase.pascal(name) %>.tsx
-sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/<%= h.changeCase.pascal(name) %>.tsx
+to: <%= fullPath %>/index.tsx
+sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/index.tsx
 ---
-<%
-componentType = hasChildren ? 'FC' : 'VFC'
-%>
-import { <%= componentType %> } from 'react'
-
-<% if (hasHooks) { %>
-import { use<%= h.changeCase.pascal(name) %> } from './hooks'
-<% } %>
+import { FC<% if (hasChildren) { %>, ReactNode<% } %> } from 'react'
+<% if (hasHooks) { %>import { use<%= h.changeCase.pascal(name) %> } from './hooks'<% } %>
 
 type Props = {
-
+  <% if (hasChildren) { %>children: ReactNode,<% } %>
 }
 
-const <%= h.changeCase.pascal(name) %>: <%= componentType %><Props> = ({
+export const <%= h.changeCase.pascal(name) %>: FC<Props> = ({
   <% if (hasChildren) { %>children,<% } %>
 }) => {
   <% if (hasHooks) { %>const {} = use<%= h.changeCase.pascal(name) %>()<% } %>
@@ -26,5 +20,3 @@ const <%= h.changeCase.pascal(name) %>: <%= componentType %><Props> = ({
     </div>
   )
 }
-
-export default <%= h.changeCase.pascal(name) %>

@@ -1,5 +1,8 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
-const AppProviders: FC = ({ children }) => <>{children}</>
+type Props = {
+  children: ReactNode
+}
+const AppProviders: FC<Props> = ({ children }) => <>{children}</>
 
 export default AppProviders
