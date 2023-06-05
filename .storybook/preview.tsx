@@ -1,4 +1,4 @@
-import '../src/css/global.css'
+import '@/styles/global.css'
 import { AppProviders } from '@/components/functions/providers/AppProviders'
 import * as React from 'react'
 import { StoryContext } from '@storybook/react'
