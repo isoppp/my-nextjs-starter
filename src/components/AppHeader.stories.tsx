@@ -1,13 +1,9 @@
-import { Meta, Story } from '@storybook/react'
-import React from 'react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import AppHeader from './AppHeader'
 
 export default {
   component: AppHeader,
-  title: 'Layouts/AppHeader',
-} as Meta
+} as Meta<typeof AppHeader>
 
-const Template: Story = () => <AppHeader />
-
-export const Default = Template.bind({})
+export const Default: StoryObj<typeof AppHeader> = {}
