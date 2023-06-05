@@ -1,6 +1,6 @@
 ---
-to: <%= fullPath %>/index.tsx
-sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/index.tsx
+to: <%= fullPath %>/<%= h.changeCase.pascal(name) %>.tsx
+sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/<%= h.changeCase.pascal(name) %>.tsx
 ---
 import { FC<% if (hasChildren) { %>, ReactNode<% } %> } from 'react'
 <% if (hasHooks) { %>import { use<%= h.changeCase.pascal(name) %> } from './hooks'<% } %>
