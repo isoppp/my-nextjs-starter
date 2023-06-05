@@ -15,10 +15,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: yarn
-      - name: yarn install
-        run: yarn install
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install
       - name: eslint
-        run: yarn lint
+        run: pnpm lint
       - name: tsc
-        run: yarn type-check
+        run: pnpm type-check
