@@ -3,10 +3,10 @@ import '@/css/global.css'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import AppFooter from '@/components/AppFooter'
-import AppHeader from '@/components/AppHeader'
-import AppProviders from '@/components/core/AppProviders'
-import FlashMessages from '@/components/shared/FlashMessages'
+import { AppProviders } from '@/components/functions/providers/AppProviders'
+import { AppFooter } from '@/components/global/AppFooter/AppFooter'
+import { AppHeader } from '@/components/global/AppHeader/AppHeader'
+import { FlashMessages } from '@/components/global/FlashMessages/FlashMessages'
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
