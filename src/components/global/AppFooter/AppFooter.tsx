@@ -1,7 +1,5 @@
 import { FC } from 'react'
 
-const AppFooter: FC = () => {
+export const AppFooter: FC = () => {
   return <footer>Footer</footer>
 }
-
-export default AppFooter

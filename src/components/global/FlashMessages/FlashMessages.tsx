@@ -32,7 +32,7 @@ const FlashMessage: FC<{ id: string; className?: string; children: ReactNode }> 
         className,
         '',
         'transition-all duration-200',
-        mounted && !startFadeout ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full',
+        mounted && !startFadeout ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0',
       ])}
       onTransitionEnd={onTransitionend}
     >
@@ -41,18 +41,18 @@ const FlashMessage: FC<{ id: string; className?: string; children: ReactNode }> 
   )
 }
 
-const FlashMessages: FC = () => {
+export const FlashMessages: FC = () => {
   const isClient = useClient()
   const { items } = useSnapshot(flashMessageStore)
 
   if (!isClient) return <></>
   return createPortal(
-    <div className="fixed right-6 bottom-6">
+    <div className="fixed bottom-6 right-6">
       {items.map((mes) => (
         <FlashMessage id={mes.id} key={mes.id} className={'mt-4 first:mt-0'}>
           <div
             className={clsx([
-              'py-2 px-6 font-semibold text-white rounded-md shadow-md',
+              'rounded-md px-6 py-2 font-semibold text-white shadow-md',
               'transition-all duration-200',
               mes.type === 'success' && 'bg-green-500',
               mes.type === 'error' && 'bg-red-500',
@@ -67,5 +67,3 @@ const FlashMessages: FC = () => {
     window.document.body,
   )
 }
-
-export default FlashMessages
