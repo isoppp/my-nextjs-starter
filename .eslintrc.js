@@ -9,7 +9,7 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
   extends: ['eslint:recommended', 'plugin:storybook/recommended'],
-  plugins: ['simple-import-sort'],
+  plugins: ['simple-import-sort', 'unused-imports'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
@@ -45,6 +45,19 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error'],
         'simple-import-sort/imports': 'error',
         'simple-import-sort/exports': 'error',
+
+        // or "@typescript-eslint/no-unused-vars": "off",
+        'unused-imports/no-unused-imports': 'error',
+        'unused-imports/no-unused-vars': [
+          'warn',
+          {
+            vars: 'all',
+            varsIgnorePattern: '^_',
+            args: 'after-used',
+            argsIgnorePattern: '^_',
+            ignoreRestSiblings: true,
+          },
+        ],
       },
     },
   ],

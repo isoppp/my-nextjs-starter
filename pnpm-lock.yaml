@@ -109,6 +109,9 @@ devDependencies:
   eslint-plugin-tailwindcss:
     specifier: 3.12.0
     version: 3.12.0(tailwindcss@3.3.2)
+  eslint-plugin-unused-imports:
+    specifier: ^2.0.0
+    version: 2.0.0(@typescript-eslint/eslint-plugin@5.59.6)(eslint@8.41.0)
   eslint-plugin-valtio:
     specifier: 0.6.2
     version: 0.6.2
@@ -7181,9 +7184,29 @@ packages:
       tailwindcss: 3.3.2
     dev: true
 
+  /eslint-plugin-unused-imports@2.0.0(@typescript-eslint/eslint-plugin@5.59.6)(eslint@8.41.0):
+    resolution: {integrity: sha512-3APeS/tQlTrFa167ThtP0Zm0vctjr4M44HMpeg1P4bK6wItarumq0Ma82xorMKdFsWpphQBlRPzw/pxiVELX1A==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.0.0
+      eslint: ^8.0.0
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.59.6(@typescript-eslint/parser@5.59.6)(eslint@8.41.0)(typescript@5.1.1-rc)
+      eslint: 8.41.0
+      eslint-rule-composer: 0.3.0
+    dev: true
+
   /eslint-plugin-valtio@0.6.2:
     resolution: {integrity: sha512-7U870y+gjL6xsiwPyMcUFHFbrMPk2t02X6V4VF5rSDi0f3A/uQDqAVvsY7m035plKW0Ke2i1aRch4tNWtnRqLA==}
     engines: {node: '>=12.7.0'}
+    dev: true
+
+  /eslint-rule-composer@0.3.0:
+    resolution: {integrity: sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==}
+    engines: {node: '>=4.0.0'}
     dev: true
 
   /eslint-scope@5.1.1:
