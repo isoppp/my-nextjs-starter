@@ -82,6 +82,9 @@ devDependencies:
   autoprefixer:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.23)
+  css-loader:
+    specifier: ^6.8.1
+    version: 6.8.1(webpack@5.85.0)
   eslint:
     specifier: 8.41.0
     version: 8.41.0
