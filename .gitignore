@@ -35,5 +35,3 @@ yarn-error.log*
 
 # tsconfig incremental
 tsconfig.tsbuildinfo
-
-.storybook/tailwind.css

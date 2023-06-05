@@ -1,4 +1,4 @@
-import './tailwind.css'
+import '../src/css/global.css'
 import AppProviders from '../src/components/core/AppProviders'
 import * as React from 'react'
 import { StoryContext } from '@storybook/react'

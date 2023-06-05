@@ -4,15 +4,21 @@ module.exports = {
     node: true,
     es6: true,
   },
-  parserOptions: { ecmaVersion: 2020 },
+  parserOptions: {
+    ecmaVersion: 2020,
+  },
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:storybook/recommended'],
   plugins: ['simple-import-sort'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
       parser: '@typescript-eslint/parser',
-      settings: { react: { version: 'detect' } },
+      settings: {
+        react: {
+          version: 'detect',
+        },
+      },
       env: {
         browser: true,
         node: true,
@@ -31,16 +37,12 @@ module.exports = {
       rules: {
         // We will use TypeScript's types for component props instead
         'react/prop-types': 'off',
-
         // No need to import React when using Next.js
         'react/react-in-jsx-scope': 'off',
-
         // This rule is not compatible with Next.js's <Link /> components
         'jsx-a11y/anchor-is-valid': 'off',
-
         // Why would you want unused vars?
         '@typescript-eslint/no-unused-vars': ['error'],
-
         'simple-import-sort/imports': 'error',
         'simple-import-sort/exports': 'error',
       },
