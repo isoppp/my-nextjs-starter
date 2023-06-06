@@ -5,7 +5,7 @@ My Next.js starter
 - React(Next.js) + Typescript
 - ESLint + Prettier + Husky + ling-staged
 - TailwindCSS + clsx
-- Valtio
+- Jotai
 - React Hook Form + zod
 - react-icons
 - dayjs

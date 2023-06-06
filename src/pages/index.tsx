@@ -1,9 +1,9 @@
 import { NextPage } from 'next'
 
-import { useFlashMessageDispatcher } from '@/hooks/useFlashMessageDispatcher'
+import { useFlashMessageActions } from '@/store/flashMessage/hooks'
 
 const IndexPage: NextPage = () => {
-  const { addSuccessMessage, addErrorMessage } = useFlashMessageDispatcher()
+  const { addSuccessMessage, addErrorMessage } = useFlashMessageActions()
   return (
     <div>
       <h1 className="mb-[10px]">Home</h1>
