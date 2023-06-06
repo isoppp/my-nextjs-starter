@@ -21,7 +21,6 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:tailwindcss/recommended',
     'plugin:storybook/recommended',
-    'plugin:valtio/recommended',
     'prettier',
   ],
   rules: {

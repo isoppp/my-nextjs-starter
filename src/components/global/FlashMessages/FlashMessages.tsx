@@ -1,11 +1,11 @@
 import clsx from 'clsx'
+import { useAtomValue } from 'jotai'
 import { FC, ReactNode, useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { useSnapshot } from 'valtio'
 
 import { useClient } from '@/hooks/useClient'
-import { useFlashMessageDispatcher } from '@/hooks/useFlashMessageDispatcher'
-import { flashMessageStore } from '@/store/flash-message'
+import { useFlashMessageActions } from '@/store/flashMessage/hooks'
+import { flashMessagesAtom } from '@/store/flashMessage/store'
 
 const FlashMessage: FC<{ id: string; className?: string; children: ReactNode }> = ({
   id,
@@ -14,7 +14,7 @@ const FlashMessage: FC<{ id: string; className?: string; children: ReactNode }> 
 }) => {
   const [startFadeout, setStartFadeOut] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const { removeMessage } = useFlashMessageDispatcher()
+  const { removeMessage } = useFlashMessageActions()
   const onTransitionend = useCallback(() => {
     if (startFadeout) removeMessage(id)
   }, [id, removeMessage, startFadeout])
@@ -43,7 +43,7 @@ const FlashMessage: FC<{ id: string; className?: string; children: ReactNode }> 
 
 export const FlashMessages: FC = () => {
   const isClient = useClient()
-  const { items } = useSnapshot(flashMessageStore)
+  const items = useAtomValue(flashMessagesAtom)
 
   if (!isClient) return <></>
   return createPortal(
