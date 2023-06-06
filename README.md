@@ -3,6 +3,7 @@ My Next.js starter
 ---
 
 - React(Next.js) + Typescript
+  - Component generation using hygen 
 - ESLint + Prettier + Husky + ling-staged
 - TailwindCSS + clsx
 - Jotai
