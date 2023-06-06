@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint --ext js,ts,tsx . --ignore-path .gitignore",
+    "lint": "eslint --ext ts,tsx . --ignore-path .gitignore",
     "format": "prettier --write './**/*.{js,ts,tsx,css,scss,json,html,graphql,md}' --ignore-path .gitignore",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -18,7 +18,7 @@
     "test": "vitest"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{ts,tsx}": [
       "eslint --fix"
     ],
     "*.{js,ts,tsx,css,scss,json,html,graphql,md}": [
@@ -38,6 +38,7 @@
     "zod": "^3.11.6"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^13.4.4",
     "@storybook/addon-actions": "7.0.18",
     "@storybook/addon-essentials": "7.0.18",
     "@storybook/addon-interactions": "7.0.18",
