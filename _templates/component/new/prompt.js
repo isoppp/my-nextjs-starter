@@ -3,7 +3,7 @@ const changeCase = require('change-case')
 const glob = require('glob')
 
 const componentRootDirs = [
-  ...glob.sync('src/components/!(pages)/', { dot: false }),
+  ...glob.sync('src/components/*', { dot: false }),
   ...glob.sync('src/+(features)/!(_*)/components', { dot: false }),
 ]
 const componentDirs = [
