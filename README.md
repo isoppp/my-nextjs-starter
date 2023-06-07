@@ -1,4 +1,5 @@
 My Next.js starter
+Need to setup libraries related to API such as tanstack query, SWR, Apollo, urql, etc by project speccifications.
 
 ---
 
@@ -12,4 +13,3 @@ My Next.js starter
 - dayjs
 - Storybook
 - svgr
-- add react-query(w/axios) or urql(w/graphql-gen) by project spec(REST or GraphQL)
