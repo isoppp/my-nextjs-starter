@@ -15,7 +15,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "gen:c": "hygen component new",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
