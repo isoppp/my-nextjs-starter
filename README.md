@@ -1,4 +1,5 @@
-My Next.js starter
+My Next.js starter.
+
 Need to setup libraries related to API such as tanstack query, SWR, Apollo, urql, etc by project speccifications.
 
 ---
