@@ -1,6 +1,6 @@
 ---
 to: <%= fullPath %>/Presenter.stories.tsx
-sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/Presenter.stories.tsx
+sh: cd <%= cwd %> && pnpm run prettier --write <%= fullPath %>/Presenter.stories.tsx
 ---
 import { Meta, StoryObj } from '@storybook/react'
 

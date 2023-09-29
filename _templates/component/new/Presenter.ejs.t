@@ -1,6 +1,6 @@
 ---
 to: <%= fullPath %>/Presenter.tsx
-sh: cd <%= cwd %> && yarn run prettier --write <%= fullPath %>/Presenter.tsx
+sh: cd <%= cwd %> && pnpm run prettier --write <%= fullPath %>/Presenter.tsx
 ---
 import { FC } from 'react'
 
