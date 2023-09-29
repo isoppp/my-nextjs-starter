@@ -24,19 +24,25 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    // We will use TypeScript's types for component props instead
     'react/prop-types': 'off',
-    '@typescript-eslint/ban-types': 'off',
-    'no-empty-pattern': 'off',
-
     // No need to import React when using Next.js
     'react/react-in-jsx-scope': 'off',
 
-    // This rule is not compatible with Next.js's <Link /> components
-    'jsx-a11y/anchor-is-valid': 'off',
+    // typescript can handle this
+    '@typescript-eslint/no-explicit-any': 'off',
 
+    // Why would you want unused vars?
     '@typescript-eslint/no-unused-vars': ['error'],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+
+    // custom
+    '@typescript-eslint/ban-types': 'off',
+    'no-empty-pattern': 'off',
+
+    // for unused-imports
+    // or "@typescript-eslint/no-unused-vars": "off",
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
       'warn',
@@ -49,4 +55,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.stories.tsx'],
+      rules: {
+        'react-hooks/rules-of-hooks': 'off',
+      },
+    },
+  ],
 }
