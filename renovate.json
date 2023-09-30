@@ -3,21 +3,5 @@
   "prHourlyLimit": 0,
   "prConcurrentLimit": 10,
   "labels": ["renovate"],
-  "additionalBranchPrefix": "{{parentDir}}-",
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["postgres"],
-      "matchManagers": ["docker-compose"],
-      "enabled": false
-    },
-    {
-      "matchPackagePatterns": ["node"],
-      "matchManagers": ["asdf"],
-      "enabled": false
-    },
-    {
-      "matchDepTypes": ["packageManager"],
-      "enabled": false
-    }
-  ]
+  "additionalBranchPrefix": "{{parentDir}}-"
 }
