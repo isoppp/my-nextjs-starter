@@ -25,20 +25,10 @@ export const useFlashMessageActions = () => {
     [setFlashMessages],
   )
 
-  const reset = useCallback(() => {
-    setFlashMessages([])
-  }, [setFlashMessages])
-
   return {
     addSuccessMessage,
     addErrorMessage,
     addInfoMessage,
     removeMessage,
-  }
-
-  return {
-    addMessage,
-    removeMessage,
-    reset,
   }
 }
