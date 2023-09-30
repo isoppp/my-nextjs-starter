@@ -9,14 +9,16 @@ const plugin = require('tailwindcss/plugin')
 // }
 
 const fallbackFonts = [
+  'Inter',
   '"Helvetica Neue"',
-  'Arial',
   '"Hiragino Kaku Gothic ProN"',
   '"Hiragino Sans"',
+  'Arial',
   'Meiryo',
   'sans-serif',
 ]
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./public/**/*.html', './src/**/*.{ts,tsx}'],
   theme: {

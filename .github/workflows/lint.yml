@@ -1,4 +1,4 @@
-name: Frontend Lint
+name: Basic Tests
 
 on:
   pull_request:
@@ -8,22 +8,54 @@ on:
 
 jobs:
   test:
-    name: "Run eslint / tsc"
+    name: "Run eslint / type-check / test"
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: my-nextjs-starter
+        ports:
+          - 5434:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: my-nextjs-starter
+        ports:
+          - 3308:3306
+        options: >-
+          --health-cmd "mysqladmin ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
         with:
           version: 8
           run_install: false
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.tool-versions'
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: generate prisma client
+        run: pnpm prisma generate
       - name: eslint
         run: pnpm lint
       - name: tsc
         run: pnpm type-check
+      - name: test
+        run: pnpm test-ci

@@ -1,14 +1,19 @@
 import '@/styles/global.css'
+import 'dayjs/locale/ja'
 
-import { AppProps } from 'next/app'
+import dayjs from 'dayjs'
+import { AppType } from 'next/app'
 import Head from 'next/head'
 
 import { AppProviders } from '@/components/functions/providers/AppProviders'
 import { AppFooter } from '@/components/global/AppFooter/AppFooter'
 import { AppHeader } from '@/components/global/AppHeader/AppHeader'
 import { FlashMessages } from '@/components/global/FlashMessages/FlashMessages'
+import { env } from '@/env.mjs'
+import { trpc } from '@/lib/trpc'
+dayjs.locale('ja')
 
-export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => {
   return (
     <AppProviders>
       <Head>
@@ -17,6 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       </Head>
       <AppHeader />
       <main>
+        <input type="hidden" value={env.NEXT_PUBLIC_BUILD_ID} name="build-id" />
         <Component {...pageProps} />
       </main>
       <AppFooter />
@@ -24,3 +30,5 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     </AppProviders>
   )
 }
+
+export default trpc.withTRPC(MyApp)

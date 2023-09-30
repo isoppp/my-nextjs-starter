@@ -35,3 +35,9 @@ yarn-error.log*
 
 # tsconfig incremental
 tsconfig.tsbuildinfo
+
+# .env
+.env*
+!.env.example
+!.env.development
+!.env.test

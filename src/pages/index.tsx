@@ -1,9 +1,11 @@
 import { NextPage } from 'next'
 
+import { trpc } from '@/lib/trpc'
 import { useFlashMessageActions } from '@/store/flashMessage/hooks'
 
 const IndexPage: NextPage = () => {
   const { addSuccessMessage, addErrorMessage } = useFlashMessageActions()
+  const { data, isLoading } = trpc.sample.getSamples.useQuery()
   return (
     <div>
       <h1 className="mb-[10px]">Home</h1>
@@ -15,6 +17,7 @@ const IndexPage: NextPage = () => {
           <button onClick={() => addErrorMessage?.('Error!')}>Add Error</button>
         </div>
       </div>
+      <div>{isLoading ? <div>...loading</div> : <div>{JSON.stringify(data, null, 2)}</div>}</div>
     </div>
   )
 }
