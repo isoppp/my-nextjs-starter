@@ -2,7 +2,7 @@ version: '3.7'
 services:
   db:
     platform: linux/amd64
-    image: mysql:5.7 # or postgres:xx
+    image: mysql:8.1 # or postgres:xx
     container_name: my-nextjs-starter-db-dev
     restart: always
     ports: # defaults are postgres=5432, mysql=3306
@@ -15,7 +15,7 @@ services:
       - db:/var/lib/mysql
   db-test:
     platform: linux/amd64
-    image: mysql:5.7
+    image: mysql:8.1
     container_name: my-nextjs-starter-db-test
     restart: always
     ports:
