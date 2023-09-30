@@ -25,7 +25,7 @@ services:
       - .env.test
     volumes:
       - db-test:/var/lib/postgresql/data
-      - db:/var/lib/mysql
+      - db-test:/var/lib/mysql
 volumes:
   db:
     name: my-nextjs-starter-db
