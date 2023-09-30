@@ -1,16 +1,23 @@
-My Next.js starter.
-
-Need to setup libraries related to API such as tanstack query, SWR, Apollo, urql, etc by project speccifications.
-
----
+## Setup
 
 - React(Next.js) + Typescript
-  - Component generation using hygen 
+  - Component generation using hygen
 - ESLint + Prettier + Husky + ling-staged
 - TailwindCSS + clsx
-- Jotai
 - React Hook Form + zod
+- Jotai
+- Storybook
+- vitest
 - react-icons
 - dayjs
-- Storybook
 - svgr
+- prisma + trpc with mysql/postgres
+
+## TODO for starting new project
+
+- need backend?
+  - yes
+    - [ ] choose mysql/postgres and delete unused one
+    - [ ] add auth service if needed
+  - no
+    - [ ] delete backend files from docker-compose, env, CI and project(trpc, prisma, api route etc)
