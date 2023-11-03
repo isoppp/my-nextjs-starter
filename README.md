@@ -1,7 +1,7 @@
 ## Setup
 
 - React(Next.js) + Typescript
-  - Component generation using hygen
+  - Component generation using scaffdog
 - ESLint + Prettier + Husky + ling-staged
 - TailwindCSS + clsx
 - React Hook Form + zod

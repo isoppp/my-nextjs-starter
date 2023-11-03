@@ -2,9 +2,7 @@
   "name": "my-nextjs-starter",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "pnpm": ">=8.6"
-  },
+  "packageManager": "pnpm@8.10.0",
   "scripts": {
     "start-by-docker": "echo $COMMIT_HASH && npx prisma migrate deploy && node server.js",
     "start": "npx prisma migrate deploy && next start",
@@ -16,6 +14,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "gen-c": "hygen component new",
+    "gen-c2": "scaffdog generate react-component",
     "migrate": "dotenv -e .env.development -- prisma migrate dev",
     "migrate:reset": "dotenv -e .env.development -- prisma migrate reset",
     "migrate:reset:test": "dotenv -e .env.test -- prisma migrate reset --force --skip-seed",
@@ -74,6 +73,7 @@
     "eslint-plugin-storybook": "0.6.15",
     "eslint-plugin-tailwindcss": "3.13.0",
     "eslint-plugin-unused-imports": "3.0.0",
+    "scaffdog": "3.0.0",
     "vite-tsconfig-paths": "4.2.1",
     "vitest": "0.34.6"
   },
