@@ -2,9 +2,7 @@
   "name": "my-nextjs-starter",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "pnpm": ">=8.6"
-  },
+  "packageManager": "pnpm@8.10.0",
   "scripts": {
     "start-by-docker": "echo $COMMIT_HASH && npx prisma migrate deploy && node server.js",
     "start": "npx prisma migrate deploy && next start",
