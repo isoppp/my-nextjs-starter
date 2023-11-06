@@ -7,7 +7,7 @@ questions:
   name: 'Please enter component name.(Convert to Pascal case.)'
 ---
 
-# {{ inputs.name | pascal }}/index.tsx
+# {{ inputs.name | pascal }}/{{ inputs.name | pascal }}.tsx
 
 ```markdown
 import { FC } from 'react'
@@ -24,7 +24,7 @@ return <div>{{ inputs.name | pascal }}</div>
 ```markdown
 import { Meta, StoryObj } from '@storybook/react'
 
-import { {{ inputs.name | pascal }} as Component } from './'
+import { {{ inputs.name | pascal }} as Component } from './{{ inputs.name | pascal }}'
 
 export default {
 component: Component,
