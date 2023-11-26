@@ -41,34 +41,8 @@ module.exports = {
           bg: '#fafafa',
         },
       },
-      spacing: {
-        full: '100%',
-      },
-      fontSize: {
-        'icon-xs': '16',
-        'icon-sm': '24px',
-        'icon-md': '32px',
-        'icon-lg': '48px',
-        'icon-xl': '64px',
-      },
       minHeight: {
-        '100vh': '100vh',
-      },
-      opacity: {
-        85: '.85',
-      },
-      grayscale: {
-        5: '5%',
-        25: '25%',
-      },
-      brightness: {
-        98: '.98',
-      },
-      lineHeight: {
-        base: '1.6',
-      },
-      animation: {
-        'spin-fast': 'spin 0.6s linear infinite',
+        '100dvh': '100dvh',
       },
     },
   },
