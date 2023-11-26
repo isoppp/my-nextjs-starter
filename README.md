@@ -10,7 +10,6 @@
 - vitest
 - react-icons
 - dayjs
-- svgr
 - prisma + trpc with mysql/postgres
 
 ## TODO for starting new project
