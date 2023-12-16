@@ -73,7 +73,7 @@
     "eslint-plugin-unused-imports": "3.0.0",
     "scaffdog": "3.0.0",
     "vite-tsconfig-paths": "4.2.2",
-    "vitest": "0.34.6"
+    "vitest": "1.0.4"
   },
   "optionalDependencies": {
     "@storybook/addon-actions": "7.6.5",
