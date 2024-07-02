@@ -169,8 +169,8 @@ devDependencies:
     specifier: 4.6.0
     version: 4.6.0(eslint@8.56.0)
   eslint-plugin-simple-import-sort:
-    specifier: 10.0.0
-    version: 10.0.0(eslint@8.56.0)
+    specifier: 12.1.1
+    version: 12.1.1(eslint@8.56.0)
   eslint-plugin-storybook:
     specifier: 0.6.15
     version: 0.6.15(eslint@8.56.0)(typescript@5.3.3)
@@ -4455,6 +4455,7 @@ packages:
 
   /@storybook/testing-library@0.2.2:
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
     requiresBuild: true
     dependencies:
       '@testing-library/dom': 9.3.1
@@ -8073,8 +8074,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-simple-import-sort@10.0.0(eslint@8.56.0):
-    resolution: {integrity: sha512-AeTvO9UCMSNzIHRkg8S6c3RPy5YEwKWSQPx3DYghLedo2ZQxowPFLGDN1AZ2evfg6r6mjBSZSLxLFsWSu3acsw==}
+  /eslint-plugin-simple-import-sort@12.1.1(eslint@8.56.0):
+    resolution: {integrity: sha512-6nuzu4xwQtE3332Uz0to+TxDQYRLTKRESSc2hefVT48Zc8JthmN23Gx9lnYhu0FtkRSL1oxny3kJ2aveVhmOVA==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
