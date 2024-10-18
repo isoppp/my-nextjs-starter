@@ -76,19 +76,19 @@
     "vitest": "1.2.1"
   },
   "optionalDependencies": {
-    "@storybook/addon-actions": "7.6.10",
-    "@storybook/addon-essentials": "7.6.10",
-    "@storybook/addon-interactions": "7.6.10",
-    "@storybook/addon-links": "7.6.10",
+    "@storybook/addon-actions": "8.3.6",
+    "@storybook/addon-essentials": "8.3.6",
+    "@storybook/addon-interactions": "8.3.6",
+    "@storybook/addon-links": "8.3.6",
     "@storybook/addon-postcss": "2.0.0",
-    "@storybook/nextjs": "7.6.10",
-    "@storybook/react": "7.6.10",
+    "@storybook/nextjs": "8.3.6",
+    "@storybook/react": "8.3.6",
     "@storybook/testing-library": "0.2.2",
     "husky": "8.0.3",
     "hygen": "6.2.11",
     "lint-staged": "15.2.0",
     "prettier": "3.2.4",
-    "storybook": "7.6.10"
+    "storybook": "8.3.6"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
