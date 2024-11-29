@@ -84,7 +84,7 @@
     "@storybook/nextjs": "7.6.10",
     "@storybook/react": "7.6.10",
     "@storybook/testing-library": "0.2.2",
-    "husky": "8.0.3",
+    "husky": "9.1.6",
     "hygen": "6.2.11",
     "lint-staged": "15.2.0",
     "prettier": "3.2.4",
